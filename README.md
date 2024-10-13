@@ -34,3 +34,15 @@ Styling the canvas element should allow anyone to improve upon the graphics with
 - Positioning: It's likely that the canvas needs to be fullscreen, so `position: absolute; inset: 0;` can help achieve that.
 
 - Background videos: Passing a video as the source element allows devs to connect a video file to the visualizer, and it should work in the same way.
+
+## Contributing
+
+This repo accepts new contributions.
+
+To begin, fork the repo and install the dev dependencies (the example will use `pnpm` but other package managers can be used):
+
+```
+pnpm i
+pnpm dev
+```
+The second command will print out the localhost address for testing, which contains the HTML file with an audio element and a visualizer ready to play.
