@@ -7,7 +7,7 @@ export type MusicLightsOptions = {
 export type VisualizerFn = (dataArray: Uint8Array, ctx: Context2D) => void;
 
 export function MusicLights(
-  el: HTMLAudioElement,
+  el: HTMLAudioElement | HTMLVideoElement,
   canvas: HTMLCanvasElement,
   options: MusicLightsOptions = {},
 ) {
@@ -38,6 +38,9 @@ export function MusicLights(
   el.addEventListener(
     "play",
     () => {
+      if (audioCtx.state !== "running") {
+        audioCtx.start();
+      }
       const source = audioCtx.createMediaElementSource(el);
       source.connect(analyser);
       render();
