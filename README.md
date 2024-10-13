@@ -14,6 +14,8 @@ Adds symmetric bars filled with square cells. The hue of the color changes outwa
 
 ## API
 
+The library is meant to be imported via modules, so make sure to import the root `MusicLights` function and any visualizers you want. Then, initialize `MusicLights` passing the audio element and canvas element used, and then add visualizers with the `addVisualizer` function. 
+
 ```
 MusicLights(audioEl, canvasEl, options)
     .addVisualizer(CellBars(options));
